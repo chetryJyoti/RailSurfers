@@ -25,5 +25,27 @@ export const GAME_IDLE = 0;
 export const GAME_PLAYING = 1;
 export const GAME_OVER = 2;
 
+// Jump/Slide
+export const JUMP_HEIGHT = 120;
+export const JUMP_DURATION = 600;
+export const SLIDE_DURATION = 500;
+export const SLIDE_SCALE_Y = 0.4;
+
+// Player vertical states
+export const PLAYER_GROUNDED = 0;
+export const PLAYER_JUMPING = 1;
+export const PLAYER_SLIDING = 2;
+
+// Obstacle types
+export const OBSTACLE_NORMAL = 0;
+export const OBSTACLE_HIGH = 1;
+export const OBSTACLE_LOW = 2;
+
+// Pool structure
+export const OBSTACLE_STRIDE = 4;
+
+// Gesture thresholds
+export const SWIPE_THRESHOLD_Y = 40;
+
 // Pre-calculated for worklets
 export const PLAYER_BOTTOM_Y = SCREEN_HEIGHT * 0.2;
