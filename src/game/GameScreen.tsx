@@ -13,6 +13,7 @@ import ObstaclePool from './ObstaclePool';
 import GameOverlay from './GameOverlay';
 import AnimatedRail from './AnimatedRail';
 import { useGameLoop } from './useGameLoop';
+import { useBackgroundMusic } from './useBackgroundMusic';
 import {
   LANE_WIDTH,
   PLAYER_SIZE,
@@ -102,6 +103,9 @@ export default function GameScreen() {
   // React state for UI (updated from worklet via runOnJS)
   const [displayScore, setDisplayScore] = useState(0);
   const [displayGameState, setDisplayGameState] = useState(GAME_IDLE);
+
+  // Background music - auto plays when game starts, stops on game over
+  useBackgroundMusic(displayGameState);
 
   // Update UI state from worklet
   const updateUI = useCallback((newScore: number, newGameState: number) => {
